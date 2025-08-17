@@ -1,0 +1,198 @@
+body {
+	font-family: "Segoe UI", Arial, sans-serif;
+	margin: 0;
+	background-color: #fdfdfd;
+	color: #333;
+}
+
+.cv-container {
+	display: flex;
+	min-height: 100vh;
+}
+
+
+.mobile-header {
+	display: none;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #c0d3c8;
+	padding: 10px 20px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-title {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.hamburger {
+	font-size: 1.5em;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+
+.sidebar {
+	background-color: #c0d3c8;
+	padding: 30px;
+	width: 280px;
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.profile-pic img {
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: 15px;
+}
+
+.sidebar h1 {
+	font-size: 1.8em;
+	margin: 10px 0 5px;
+	text-align: center;
+}
+
+.sidebar .subtitle {
+	font-size: 1.1em;
+	color: #666;
+	margin-bottom: 20px;
+}
+
+
+.works-grid {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 20px;
+	gap: 30px;
+}
+
+.works-grid img {
+	flex: 1;
+	max-width: 30%;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s, box-shadow 0.3s;
+	cursor: pointer;
+}
+
+.works-grid img:hover {
+	transform: scale(1.05);
+	box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+
+nav {
+	margin: 20px 0;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 100%;
+}
+
+nav a {
+	text-decoration: none;
+	color: #444;
+	padding: 8px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+nav a:hover,
+nav a.active {
+	background-color: #8ca892;
+}
+
+.contact-info {
+	margin-top: 50px;
+	text-align: center;
+	font-size: 0.9em;
+}
+
+.contact-info a {
+	color: #444;
+}
+
+.contact-info a:hover {
+	text-decoration: underline;
+}
+
+
+.main-content {
+	flex: 1;
+	padding: 40px;
+}
+
+.main-content h2 {
+	font-size: 1.4em;
+	color: #444;
+	border-bottom: 2px solid #91b49c;
+	padding-bottom: 5px;
+	margin-top: 30px;
+}
+
+.item {
+	margin-bottom: 25px;
+}
+
+.item h3 {
+	font-size: 1.15em;
+	margin: 0;
+	color: #222;
+}
+
+.item p {
+	margin: 5px 0;
+	color: #555;
+}
+
+.skills {
+	list-style: none;
+	padding: 0;
+	margin: 10px 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 8px;
+}
+
+.skills li {
+	background: #fff;
+	padding: 8px 12px;
+	border-radius: 5px;
+	font-size: 0.95em;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+
+@media (max-width: 768px) {
+	.cv-container {
+		flex-direction: column;
+	}
+
+	.mobile-header {
+		display: flex;
+	}
+
+	.sidebar {
+		width: 90%;
+		display: none;
+	}
+
+	.sidebar.show {
+		display: flex;
+	}
+
+	.works-grid img {
+		flex: 1;
+		max-width: 100%;
+	}
+
+	nav {
+		flex-direction: column;
+		align-items: center;
+	}
+}
